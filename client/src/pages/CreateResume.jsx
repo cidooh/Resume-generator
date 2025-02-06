@@ -39,7 +39,6 @@ const CreateResume = () => {
           <p>{formData.dateOfBirth}</p>
 </div>
 <div className="flex p-5 gap-5"> 
-
          <p> {formData.dateStarted}</p>
           <p>{formData.dateEnded}</p>
           

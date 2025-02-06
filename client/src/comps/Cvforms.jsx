@@ -183,6 +183,7 @@ const Cvforms = ({ handleFormChange }) => {
             name="linkLabel"
             value={formData.linkLabel}
             onChange={handleChange}
+            className="border-2 border-gray-800 p-2 w-[250px] rounded-md"
           />
           <input
             type="text"
@@ -190,10 +191,11 @@ const Cvforms = ({ handleFormChange }) => {
             name="socialLink"
             value={formData.socialLink}
             onChange={handleChange}
+            className="border-2 border-gray-800 p-2 w-[250px] rounded-md"
           />
         </div>
 
-        <button className="bg-[#0569EB] p-3 rounded-md">Save changes</button>
+        <button className="bg-[#0569EB] mt-5 p-3 text-white rounded-md">Save changes</button>
       </div>
     </form>
   );

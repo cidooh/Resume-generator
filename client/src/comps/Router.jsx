@@ -38,9 +38,9 @@ const Router = () => {
         <Route
           path="/resume"
           element={
-            <Layout>
+            <Layout2>
               <CreateResume />
-            </Layout>
+            </Layout2>
           }
         />
 
