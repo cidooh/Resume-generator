@@ -23,14 +23,14 @@ def create_superuser(self,email,password=None, **extra_kwargs):
     return self.create_user(email,password, **extra_kwargs)
 
 class CustomUser(AbstractBaseUser,PermissionsMixin):
-    first_name = models.CharField(max_length=50)
-    last_name = models.CharField(max_length=50)
+    firstName = models.CharField(max_length=50)
+    lastName = models.CharField(max_length=50)
     email = models.EmailField(unique=True)
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
     is_email_verified = models.BooleanField(default=False)
     objects = CustomUserManager()
     USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = ['first_name','last_name']
+    REQUIRED_FIELDS = ['firstName','lastName']
     def __str__(self):
-        return f'{self.first_name} {self.last_name}' 
+        return f'{self.firstName} {self.lastName}' 
