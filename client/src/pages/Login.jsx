@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router";
+import { useNavigate } from "react-router";
 
 const Login = () => {
   const [formData, setFormData] = useState({
@@ -8,6 +9,7 @@ const Login = () => {
   });
 
   const [errors, setErrors] = useState({});
+   const Navigate=useNavigate()
 
   // Validation function
   const validateInput = (name, value) => {
@@ -106,6 +108,7 @@ const Login = () => {
               <div className="mt-6">
                 <button
                   type="submit"
+                  onClick={() => Navigate("/templates")}
                   className="w-full py-3 bg-[#0569EB] text-white rounded-lg shadow-lg hover:bg-blue-500 text-xl font-medium transition-all duration-300"
                 >
                   Sign in
